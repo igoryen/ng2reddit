@@ -27,3 +27,12 @@
 9. Constructor. Has default values.
 
 10. Two functions for voting.
+
+11. Without this, the browser reloads the page on every click,
+    and the number of votes returns to the default one in the constructor.
+
+    The reason: the JavaScript's default action is
+    to propagate the click event to all the parent components,
+    and the web browser tries to follow the empty link and refresh the page.
+
+    To stop this, the click event handler must return false.

@@ -8,3 +8,22 @@
     They represent <input> DOM elements.
 
 2. on click, invoke the function with 2 parameters.
+
+3. The column with the number of votes
+
+4. The article information.
+
+5. the host of the Component.
+    What document element this component is attached to.
+    e.g. the host element - <app-article> tag - will have 
+    class="row".
+    "row" is a CSS class.
+6. of type Number. Represents the sum of all upvotes, minus the downvotes.
+
+7. Title of the article. Of type String.
+
+8. The URL of the article. Of type String.
+
+9. Constructor. Has default values.
+
+10. Two functions for voting.

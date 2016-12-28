@@ -1,0 +1,10 @@
+1. #newtitle and #newlink are passed as variables into the addArticle().
+    input named "title" is bound to variable "newtitle".
+    input named "link"  is bound to variable "newlink".
+    #newtitle and #newlink are called a resolve.
+
+    "newtitle" and "newlink" are objects of type HTMLInputElement.
+    Their values can be gotten as newtitle.value.
+    They represent <input> DOM elements.
+
+2. on click, invoke the function with 2 parameters.

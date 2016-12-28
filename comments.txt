@@ -28,7 +28,11 @@
 
 10. Two functions for voting.
 
-11. Without this, the browser reloads the page on every click,
+11. This says "Don't propagate the event."
+    This is a view-specific piece of logic.
+    Model Article should allow voting apart from the specific view.
+
+    Without this, the browser reloads the page on every click,
     and the number of votes returns to the default one in the constructor.
 
     The reason: the JavaScript's default action is
@@ -36,3 +40,38 @@
     and the web browser tries to follow the empty link and refresh the page.
 
     To stop this, the click event handler must return false.
+
+12. This file is an attempt to isolate the data structure
+    from the component code.
+    This data structure represents a single article.
+
+13. This is a plain class. Not an Angular Component.
+    This is the M in the MVC.
+
+14. The question mark means that the parameter is optional.
+
+15. The default is 0.
+
+16. a reference to an Article.
+
+17. Incrementing/Decrementing happens not on the Component,
+    but on the instance of Article class.
+    Commented out because they break the Law of Demeter:
+    "A given object should assume as little as possible
+    about the structure or properties of other objects."
+    They change the article's internal properties directly
+    and thus they break the encapsulation of the Article class.
+    Thus, the ArticleComponent component knows too much about
+    the internals of class Article.
+    This is fixed by adding the voteUp() and voteDown() on 
+    class Article.
+
+18. This function is on component Article.
+    It relates to the component view.
+
+19. This function is on class Article.
+    It defines what mutations happen in the model.
+
+20. This logic is moved out of the Component into the Model
+    in acc. with the MVC guideline "Fat Models, Skinny Controllers".
+    The components must do the minimum work possible.

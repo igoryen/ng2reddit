@@ -125,3 +125,5 @@
 
 27. Clear/flush the input field values.
     Changing the <input> tag on the page.
+
+28. Adding the domain to the display.

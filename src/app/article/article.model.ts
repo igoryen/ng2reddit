@@ -19,7 +19,7 @@ export class Article { // 13
         this.votes--;
     }
 
-    domain(): string {
+    domain(): string { // 28
         try {
             const link: string = this.link.split('//')[1];
             return link.split('/')[0];

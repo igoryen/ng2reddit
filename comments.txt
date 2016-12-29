@@ -25,6 +25,7 @@
 8. The URL of the article. Of type String.
 
 9. Constructor. Has default values.
+    Commented out after adding of #24.
 
 10. Two functions for voting.
 
@@ -53,6 +54,7 @@
 15. The default is 0.
 
 16. a reference to an Article.
+    A property of the Component.
 
 17. Incrementing/Decrementing happens not on the Component,
     but on the instance of Article class.
@@ -75,3 +77,47 @@
 20. This logic is moved out of the Component into the Model
     in acc. with the MVC guideline "Fat Models, Skinny Controllers".
     The components must do the minimum work possible.
+
+21. the 'articles' is an array of articles.
+    Another spelling: Array<Article>.
+    This pattern is called 'generics' (as in Java, C# etc.).
+    The Array is a collection, and this collection is typed,
+    i.e. this array will only hold objects of type 'Article'.
+
+22. A list of Article models.
+
+23. Hardcoding a particular Article in the constructor.
+    This is temporary.
+
+24. The Input annotation.
+    Now the AppComponent can store an array of 'articles'.
+    Now if we had 2 articles (article1 and article 2)
+    we can reuse the 'app-article' component
+    by passing an 'Article' as a "parameter" to the component,
+    like this:
+    <app-article [article]="article1"></app-article>
+    <app-article [article]="article2"></app-article>.
+
+    Now if you assign an Article to variable myArticle
+    you can pass it to the ArticleComponent in your view.
+    <app-article [article]="myArticle"></app-article>.
+    Here, [article] is the name of the input.
+    "myArticle" is the value of the attribute.
+    Now, variable myArticle is passed as a parameter (i.e. input)
+    to your components, or in other words 
+    the 'this.article' on the ArticleComponent instance 
+    will get (=) myArticle.
+
+25. using *ngFor directive to render multiple components.
+    'articles' is defined in the ArticleComponent.
+    'article' is the name of the field defined on 'inputs' of the ArticleComponent.
+    'a' is created by ngFor. 'a' is a temporary local variable 
+    to hold each array element.
+    Using the [inputValue]="inputValue" expression. 
+    Setting the 'article' input to the value of 'a'.
+    The 'article' input gets the value of 'a'.
+    ngFor generates a temporary variable 'a' and then
+    we pass it in to <app-article>.
+
+
+

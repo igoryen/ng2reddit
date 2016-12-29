@@ -119,5 +119,9 @@
     ngFor generates a temporary variable 'a' and then
     we pass it in to <app-article>.
 
+26. Create a new instance of Article.
+    With the submitted title and URL.
+    Push it onto the array of articles.
 
-
+27. Clear/flush the input field values.
+    Changing the <input> tag on the page.

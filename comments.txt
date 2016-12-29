@@ -127,3 +127,5 @@
     Changing the <input> tag on the page.
 
 28. Adding the domain to the display.
+
+29. Sort the array based on votes.
